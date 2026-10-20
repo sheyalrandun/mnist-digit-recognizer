@@ -1,16 +1,16 @@
 # MNIST Hand Drawing Recognizer
 
-***A custom CNN built from scratch in PyTorch to classify handwritten digits, paired with an interactive desktop drawing app.***
+**A custom CNN built from scratch in PyTorch to classify handwritten digits, paired with an interactive desktop drawing app.**
 
 ## KEY METRICS AND RESULTS
 
-- Being trained for 10 epochs while having a **97.08%** training accuracy, a **97.23%** validation accuracy, and a **97.44%** test accuracy on unseen data, this model has achieved strong generalization performance.
-- The model uses Stochastic Gradient Descent (**SGD**) as the optimization method with a **0.01** learning rate to train on the MNIST image dataset.
+- Trained for 10 epochs, achieving **97.08% training accuracy**, **97.23% validation accuracy**, and **97.44% test accuracy** on unseen data, demonstrating strong generalization performance.
+- Uses Stochastic Gradient Descent (**SGD**) with a learning rate of **0.01** to train on the MNIST image dataset.
 
 ## TOOLS
 
 - **Language:** Python
-- **Libraries & Framework:** PyTorch (`torch`, `torchvision`), Tkinter (GUI), Pillow (`PIL` image processing)
+- **Libraries & Frameworks:** PyTorch (`torch`, `torchvision`), Tkinter (GUI), Pillow (`PIL` image processing)
 
 ## STRUCTURE
 
@@ -18,36 +18,55 @@
 mnist-digit-recognizer/
 │
 ├── Models/
-│   └── mnist_model_10epoch.pth        # Trained model state dictionary
-├── Project1-(MNIST)-CODE.py          # CNN architecture definition
-├── PROJECT1-(MNIST)-Evaluate.py      # Script to evaluate model on MNIST test split
-├── PROJECT1-(MNIST)-GUI.py           # Interactive Tkinter drawing & inference app
-├── Requirements.txt                  # Required Python packages
-└── README.md                         # Project documentation
+│   └── mnist_model_10epoch.pth    # Trained model state dictionary
+├── Project1-(MNIST)-CODE.py       # CNN architecture definition
+├── PROJECT1-(MNIST)-Evaluate.py   # Script to evaluate model on MNIST test split
+├── PROJECT1-(MNIST)-GUI.py        # Interactive Tkinter drawing and inference app
+├── Requirements.txt               # Required Python packages
+└── README.md                      # Project documentation
+```
 
-SETUP & INSTRUCTIONS
+## SETUP & INSTRUCTIONS
 
-*Clone or download this repository to your local machine.
+### 1. Clone or Download the Repository
 
-**Install the required dependencies by running the following command in your terminal:
-	pip install -r Requirements.txt
+Clone this repository or download it to your local machine.
 
-**Evaluate the model on the unseen MNIST test dataset:
-	python "PROJECT1-(MNIST)-Evaluate.py"
+### 2. Install Dependencies
 
-**Launch the interactive drawing application:
-	python "PROJECT1-(MNIST)-GUI.py"
+Open a terminal in the project directory and run:
 
-(Draw any digit from 0–9 clearly on the white canvas with your mouse, click "Predict", and test the live inference!)
+```bash
+pip install -r Requirements.txt
+```
 
-ENGINEERING & OBSERVATION
+### 3. Evaluate the Model
 
-* At first i used learning rate as 0.001 and 5 epochs to train the model and calculated the models' training accuracy, validation accuracy, training loss and
-validation loss.
-* I got somewhere around 85%for both training and validation accuracy in the last epoch.
-* Then i changed the learning rate in to 0.01 and trained the model for 10 epochs to get the best out of it and i ended up with 97% for both training and
-validation accuracies.
+Evaluate the model on the unseen MNIST test dataset:
 
-GRAPHICAL USER INTERFACE
+```bash
+python "PROJECT1-(MNIST)-Evaluate.py"
+```
 
-* While using the GUI platform, we need to draw the relevant numbers using a clear set of lines. If not the models' prediction might not be well accurate.
+### 4. Launch the Drawing Application
+
+Run the following command to launch the interactive GUI:
+
+```bash
+python "PROJECT1-(MNIST)-GUI.py"
+```
+
+Draw any digit from **0–9** clearly on the white canvas using your mouse, click **Predict**, and test the model's live inference!
+
+## ENGINEERING & OBSERVATIONS
+
+Initially, I used a learning rate of `0.001` and trained the model for 5 epochs while tracking training accuracy, validation accuracy, training loss, and validation loss.
+
+I achieved approximately **85% training and validation accuracy** by the final epoch.
+
+I then increased the learning rate to `0.01` and trained the model for 10 epochs. This improved performance to over **97% across the training, validation, and test splits**, without severe overfitting.
+
+## GRAPHICAL USER INTERFACE
+
+When using the GUI, draw each digit with clear, continuous strokes on the white canvas. Unclear or unusually drawn digits may lead to incorrect predictions.
+

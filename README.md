@@ -1,34 +1,29 @@
-							--------------------------------------------		
-							--------------------------------------------		
-								MNIST Hand Drawing Recognizer
-							---------------------------------------------
-							---------------------------------------------
+# MNIST Hand Drawing Recognizer
 
 ***A custom CNN built from scratch in PyTorch to classify handwritten digits, paired with an interactive desktop drawing app.***
 
-KEY METRICS AND RESULTS
+## KEY METRICS AND RESULTS
 
-* Being trained for 10 epochs while having 97.08% of a training accuracy, 97.23% of a validation accuracy and a 97.44% of a testing accuracy in the last epoch, this 
-model has been trained well.
+- Being trained for 10 epochs while having a **97.08%** training accuracy, a **97.23%** validation accuracy, and a **97.44%** test accuracy on unseen data, this model has achieved strong generalization performance.
+- The model uses Stochastic Gradient Descent (**SGD**) as the optimization method with a **0.01** learning rate to train on the MNIST image dataset.
 
-* This model uses the Stochastic Gradient Descent(SGD) as the optimizer method as well as 0.01 learning rate to train the model using the training set of images.
+## TOOLS
 
-TOOLS
+- **Language:** Python
+- **Libraries & Framework:** PyTorch (`torch`, `torchvision`), Tkinter (GUI), Pillow (`PIL` image processing)
 
-* Language : Python
-* Libraries & Framework : Pytorch(torch,torchvision) , Tkinter(GUI) , Pillow(PIL as Image processing)
+## STRUCTURE
 
-STRUCTURE
-
-mnist digit recognizer/
+```text
+mnist-digit-recognizer/
 │
 ├── Models/
-│   └── mnist_model_10epoch.pth    	# Trained model state dictionary
-├── Project1-(MNIST)-CODE.py      	# CNN architecture definition
-├── PROJECT1-(MNIST)-Evaluate.py       # Script to evaluate model on MNIST test split
-├── PROJECT1-(MNIST)-GUI.py            # Interactive Tkinter drawing & inference app
-├── Requirements.txt               	# Required Python packages
-└── README.md                      	# Project documentation
+│   └── mnist_model_10epoch.pth        # Trained model state dictionary
+├── Project1-(MNIST)-CODE.py          # CNN architecture definition
+├── PROJECT1-(MNIST)-Evaluate.py      # Script to evaluate model on MNIST test split
+├── PROJECT1-(MNIST)-GUI.py           # Interactive Tkinter drawing & inference app
+├── Requirements.txt                  # Required Python packages
+└── README.md                         # Project documentation
 
 SETUP & INSTRUCTIONS
 
